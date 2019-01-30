@@ -1,0 +1,39 @@
+<svg class="background">
+  <image load="sync" x="0" y="0" width="100%" height="100%" href="background.png" />
+  <image id="step_icon" load="sync" x="33%-15" y="195" width="30" height="30" href="step_icon.png" />
+  <image id="calorie_icon" load="sync" x="69%-15" y="195" width="30" height="30" href="calorie_icon.png" />
+  <image id="stair_icon" load="sync" x="51%-15" y="195" width="30" height="30" href="stair_icon.png" />
+  <image id="elec_icon" load="sync" x="13%-15" y="195" width="30" height="30" href="elec_icon.png" />
+  <image id="loc_icon" load="sync" x="88%-15" y="195" width="30" height="30" href="loc_icon.png" />
+  <image id="heart" load="sync" x="100%-20" y="100%-20" width="20" height="20" href="heart_icon.png" />
+  
+  <arc id="active_mins" x="13%-20" y="190" width="40" height="40" fill="#FF00C9"
+    arc-width="5" start-angle="0" sweep-angle="40" />
+  <arc id="steps" x="33%-20" y="190" width="40" height="40" fill="#FF00C9"
+    arc-width="5" start-angle="0" sweep-angle="359" />
+  <arc id="stairs" x="51%-20" y="190" width="40" height="40" fill="#FF00C9"
+    arc-width="5" start-angle="0" sweep-angle="40" />
+  <arc id="calories" x="69%-20" y="190" width="40" height="40" fill="#FF00C9"
+    arc-width="5" start-angle="0" sweep-angle="40" />
+  <arc id="location" x="88%-20" y="190" width="40" height="40" fill="#FF00C9"
+    arc-width="5" start-angle="0" sweep-angle="40" />
+  
+  <text id="myLabel" />
+  <text id="myDate" />
+  <text id="myHeartRate" />
+  <text id="myBattery" />
+  <text id="myTemp" />
+  <text id="myBaseHR" />
+  <text id="myHRStatus" />
+  <text id="elec_label" text-length="3"/>
+  <text id="step_label" />
+  <text id="stair_label" />
+  <text id="calorie_label" />
+  <text id="loc_label" />
+  <text id="weather" />
+  <image id="watson" load="sync" x="0" y="0" width="100%" height="100%" href="Watson.png" display="none"/>
+  <use id="button" href="#push-button" x="100%-40" height="40" width="40" >
+    <image id="play" load="sync" width="40" height="40" href="play_icon.png" />
+   </use>
+  <text id="mySeconds" display="none"/>
+</svg>
