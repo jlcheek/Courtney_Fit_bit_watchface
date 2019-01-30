@@ -1,5 +1,5 @@
 <svg class="background">
-  <image load="sync" x="0" y="0" width="100%" height="100%" href="background.png" />
+  <image id="background" load="sync" x="0" y="0" width="100%" height="100%" href="background.png" />
   <image id="step_icon" load="sync" x="33%-15" y="195" width="30" height="30" href="step_icon.png" />
   <image id="calorie_icon" load="sync" x="69%-15" y="195" width="30" height="30" href="calorie_icon.png" />
   <image id="stair_icon" load="sync" x="51%-15" y="195" width="30" height="30" href="stair_icon.png" />
@@ -34,6 +34,6 @@
   <image id="watson" load="sync" x="0" y="0" width="100%" height="100%" href="Watson.png" display="none"/>
   <use id="button" href="#push-button" x="100%-40" height="40" width="40" >
     <image id="play" load="sync" width="40" height="40" href="play_icon.png" />
-   </use>
+  </use>
   <text id="mySeconds" display="none"/>
 </svg>

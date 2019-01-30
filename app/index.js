@@ -76,6 +76,11 @@ clock.ontick = (evt) => {
     stepIcon.href = "step_icon_green.png";
     stepCounter.style.fill = "#00d505";
   }//if
+  else{
+    stepLabel.style.fill = "#FF00C9";
+    stepIcon.href = "step_icon.png";
+    stepCounter.style.fill = "#FF00C9";
+  }//else
   
   //getting info for stairs
   stairLabel.text = today.local.elevationGain;
@@ -85,6 +90,11 @@ clock.ontick = (evt) => {
     stairIcon.href = "stair_icon_green.png";
     stairCounter.style.fill = "#00d505";
   }//if
+  else{
+    stairLabel.style.fill = "#FF00C9";
+    stairIcon.href = "stair_icon.png";
+    stairCounter.style.fill = "#FF00C9";
+  }//else
   
   //getting info for active minutes
   activeLabel.text = today.local.activeMinutes;
@@ -94,6 +104,11 @@ clock.ontick = (evt) => {
     elecIcon.href = "elec_icon_green.png";
     activeCounter.style.fill = "#00d505";
   }//if
+  else{
+    activeLabel.style.fill = "#FF00C9";
+    elecIcon.href = "elec_icon.png";
+    activeCounter.style.fill = "#FF00C9";
+  }//else
   
   //getting info for calories
   calorieLabel.text = today.local.calories;
@@ -103,6 +118,11 @@ clock.ontick = (evt) => {
     calorieIcon.href = "calorie_icon_green.png";
     calorieCounter.style.fill = "#00d505";
   }//if
+  else{
+    calorieLabel.style.fill = "#FF00C9";
+    calorieIcon.href = "calorie_icon.png";
+    calorieCounter.style.fill = "#FF00C9";
+  }//else
   
   //getting info for location
   locationLabel.text = today.local.distance / 1609.34;
@@ -113,6 +133,11 @@ clock.ontick = (evt) => {
     locIcon.href = "loc_icon_green.png";
     locationCounter.style.fill = "#00d505";
   }//if
+  else{
+    locationLabel.style.fill = "#FF00C9";
+    locIcon.href = "loc_icon.png";
+    locationCounter.style.fill = "#FF00C9";
+  }//else
   
   //reading the heart rate
   hrm.onreading = function(){
@@ -197,17 +222,41 @@ clock.ontick = (evt) => {
     
   }//function
   
+  display.onchange = function() {
+    if (display.on) {
+      let img = document.getElementById("background");
+      if(img.href === "background.png"){
+        img.href = "background2.png";
+      }//if
+      else if(img.href === "background2.png"){
+        img.href = "background3.png";
+      }//else if
+      else if(img.href === "background3.png"){
+        img.href = "background4.png";
+      }//else if
+      else if(img.href === "background4.png"){
+        img.href = "background5.png";
+      }//else if
+      else{
+        img.href = "background.png";
+      }//else
+    
+    }//if
   
+  }//display.onchage
+
+  
+/*  
 // Request weather data from the companion
 function fetchWeather() {
   if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
     // Send a command to the companion
     messaging.peerSocket.send({
-      command: 'weather'
+      command: 'weather';
     });
   }
 }
-/*
+
 // Display the weather data received from the companion
 function processWeatherData(data) {
   let temp = data.temperature;
